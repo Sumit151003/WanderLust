@@ -37,7 +37,7 @@ app.use(methodOverride('_method'));
 // adding boilerplate features using ejs mate 
 app.engine('ejs', ejsMate);
 
-const store =  MongoStore.create({
+const store = MongoStore.create({
     mongoUrl: process.env.Mongo_URL,
     crypto:{
         secret: process.env.SECRET
@@ -101,7 +101,7 @@ async function main(){
 }
 
 app.listen(port, ()=>{
-    console.log(`app is listening on http://localhost:${port}/listings`);
+    console.log(port);
 });
 
 //Error Handling Middleware for all non-routes
