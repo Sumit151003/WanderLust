@@ -1,0 +1,104 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+    <body>
+        <div class="row col-8 offset-2 mt-3 mb-4">
+            <h1 class="mb-3">Update Listing</h1>
+            <form method="POST" action="/listings/<%=listing.id%>?_method=PUT" enctype="multipart/form-data"
+                class="needs-validation" novalidate>
+
+                <div>
+                    <label for="listing[title]" class="form-label"><b>Title:</b></label>
+                    <input type="text" name="listing[title]" id="listing[title]" class="form-control" required
+                        value="<%=listing.title%>">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Title cannot be empty!
+                    </div>
+                    <br>
+                </div>
+
+                <div>
+                    <label for="listing[description]" class="form-label"><b>Description:</b></label>
+                    <textarea name="listing[description]" rows="10" cols="50" class="form-control"
+                        id="listing[description]" required><%=listing.description%></textarea>
+                    <div class="invalid-feedback">
+                        Enter a short description!
+                    </div>
+                    <br>
+                </div>
+
+                <p>Original Image</p>
+                <div class="sample">
+                    <img src="<%= originalUrl %>" style="border-radius: 8px;" width="250px" alt="sample">
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="listing[image]" class="form-label"><b>Upload_Image:</b></label>
+                        <input type="file" name="listing[image]" id="listing[image]" accept="image/png, image/jpeg, image/jpg, image/pdf" class="form-control">
+                        <br />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="listing[category]" class="form-label"><b>Select Category: </b></label>
+                        <select class="form-select" name="listing[category]" id="listing[category]">
+                            <option value="Amazing pools">Amazing pools</option>
+                            <option value="Farms">Farms</option>
+                            <option value="Luxe">Luxe</option>
+                            <option value="Tiny Homes">Tiny Homes</option>
+                            <option value="LakeFront">LakeFront</option>
+                            <option value="Beachfront">Beachfront</option>
+                            <option value="Cabins">Cabins</option>
+                            <option value="Castles">Castles</option>
+                            <option value="Top of the world">Top of the world</option>
+                            <option value="Camping">Camping</option>
+                            <option value="Igloos">Igloos</option>
+                            <option selected value="Trending">Trending</option>
+                            <option value="Bed & Breakfasts">Bed & Breakfasts</option>
+                            <option value="Boats">Boats</option>
+                            <option value="Arctic">Arctic</option>
+                            <option value="Golfing">Golfing</option>
+                            <option value="Creative Spaces">Creative Spaces</option>
+                            <option value="Ski-in/out">Ski-in/out</option>
+                        </select>
+                        <br />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="listing[price]" class="form-label"><b>Price:</b></label>
+                    <input type="number" name="listing[price]" id="listing[price]" min="0" class="form-control"
+                        value="<%=listing.price%>" required>
+                    <div class="invalid-feedback">
+                        Price must be more than 0!
+                    </div>
+                    <br>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="listing[location]" class="form-label"><b>Location:</b></label>
+                        <input type="text" name="listing[location]" id="listing[location]" class="form-control"
+                            value="<%=listing.location%>" required>
+                        <div class="invalid-feedback">
+                            Please enter your city!
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="listing[country]" class="form-label"><b>Country:</b></label>
+                        <input type="text" name="listing[country]" id="listing[country]" class="form-control"
+                            value="<%=listing.country%>" required>
+                        <div class="invalid-feedback">
+                            Please enter your country!
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger">Update</button>
+            </form>
+        </div>
+    </body>

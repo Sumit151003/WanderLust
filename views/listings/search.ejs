@@ -1,0 +1,19 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+  <div class="container mb-4">
+    <% for( listing of searchedListings ) { %>
+      <a href="/listings/<%= listing.id %>">
+        <div class="card listing-card">
+          <div class="card-img-overlay"></div>
+          <img src="<%= listing.image.url %>" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= listing.title %>
+            </h5>
+            <p class="card-text">
+              &#8377; <%= listing.price.toLocaleString("en-IN") %>/night
+            </p>
+          </div>
+        </div>
+      </a>
+      <% } %>
+  </div>
