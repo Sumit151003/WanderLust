@@ -1,6 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-md bg-light border-bottom" data-bs-theme="light">
   <div class="container-fluid first">
-    <a class="navbar-brand" href="http://localhost:3000/listings">
+    <a class="navbar-brand" href="/listings">
         <i class="fa-regular fa-compass"></i>
     </a>
     <button
@@ -19,29 +19,29 @@
         <a
           class="nav-link"
           aria-current="page"
-          href="http://localhost:3000/listings"
+          href="/listings"
           >Home</a
         >
       </div>
       <div class="nav-search ms-auto ms-start">
-        <form class="d-flex" method="GET" action="http://localhost:3000/listings/search">
+        <form class="d-flex" method="GET" action="/listings/search">
           <input class="form-control me-2" name="location" placeholder="Search destination" aria-label="Search">
           <button class="btn btn-danger" type="submit"><i class="fa-solid fa-magnifying-glass-location"></i>Search</button>
         </form>
       </div>
       <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="http://localhost:3000/listings/new"
+        <a class="nav-link" href="/listings/new"
           >WanderLust your home</a
         >
         <% if(!currUser){ %>
-          <a class="nav-link" href="http://localhost:3000/signup"
+          <a class="nav-link" href="/signup"
           ><b>Sign Up</b></a
         >
-        <a class="nav-link" href="http://localhost:3000/login"
+        <a class="nav-link" href="/login"
           ><b>Log In</b></a
         >
         <% } if(currUser) {%>
-        <a class="nav-link" href="http://localhost:3000/logout"
+        <a class="nav-link" href="/logout"
           ><b>Log Out</b></a
         >
         <% } %>
