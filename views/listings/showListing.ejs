@@ -1,7 +1,7 @@
 <% layout('/layouts/boilerplate.ejs') -%>
 
     <script>
-        let coords = <%- JSON.stringify(listing.geometry.coordinates) %>
+        let coords = <%-JSON.stringify(listing.geometry.coordinates)%>
     </script>
 
     <body>
@@ -106,8 +106,8 @@
                         </div>
                     </div>
                     <% } %>
-                    <div class="row mb-4 mt-5 map">
-                        <div id="map" class="col-8 offset-2">
+                        <div class="row mb-4 mt-5 map">
+                            <div id="map" class="col-8 offset-2">
+                            </div>
                         </div>
-                    </div>
     </body>

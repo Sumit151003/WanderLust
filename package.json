@@ -28,6 +28,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sumit",
+  "author": "Sumit Patidar",
   "license": "ISC"
 }

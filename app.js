@@ -101,7 +101,7 @@ async function main(){
 }
 
 app.listen(port, ()=>{
-    console.log(port);
+    console.log(`connected to port - ${port}`);
 });
 
 //Error Handling Middleware for all non-routes
