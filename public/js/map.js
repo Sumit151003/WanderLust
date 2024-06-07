@@ -1,5 +1,5 @@
 let map = L.map('map').setView(coords, 13);
-let tileUrl = process.env.MAP_URL;
+let tileUrl = `${process.env.MAP_URL}`;
 L.tileLayer(tileUrl, {
             maxZoom: 10,
         }).addTo(map);
