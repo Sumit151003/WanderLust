@@ -1,5 +1,5 @@
 let map = L.map('map').setView(coords, 13);
-let tileUrl = `https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=${process.env.Map_API_KEY}`;
+let tileUrl = process.env.MAP_URL;
 L.tileLayer(tileUrl, {
             maxZoom: 10,
         }).addTo(map);
